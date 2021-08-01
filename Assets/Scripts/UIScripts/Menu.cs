@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class Menu : MonoBehaviour
@@ -9,6 +10,8 @@ public class Menu : MonoBehaviour
     [SerializeField] private GameObject _difficultySelectMenu;
     [SerializeField] private GameObject _gamePanel;
     [SerializeField] private GameObject _gamePauseMenu;
+    [SerializeField] private GameObject _losePanel;
+    [SerializeField] private GameObject _winPanel;
 
     private GameObject _currentScreen;
     
@@ -23,6 +26,10 @@ public class Menu : MonoBehaviour
     public GameObject GamePanel => _gamePanel;
 
     public GameObject DifficultySelectMenu => _difficultySelectMenu;
+
+    public GameObject LosePanel => _losePanel;
+
+    public GameObject WinPanel => _winPanel;
 
     public void ChangeMenuScreen(GameObject screen)
     {
