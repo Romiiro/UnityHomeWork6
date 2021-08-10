@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndGameCommand : ICommand {
+public class EndGameCommand : ICommand
+{
     private bool _losed;
     private Menu _menu;
     private GameManager _gm;

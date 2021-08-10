@@ -253,14 +253,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca287b1b1c2e444e8fb4d630ec8004b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _firstNumberText: {fileID: 1514823856}
-  _secondNumberText: {fileID: 1263648830}
-  _thirdNumberText: {fileID: 576197654}
+  _codeNumberTexts:
+  - {fileID: 1789671702}
+  - {fileID: 341082020}
+  - {fileID: 1375222216}
+  _codeNumberBackgrounds:
+  - {fileID: 1514823858}
+  - {fileID: 1263648832}
+  - {fileID: 576197656}
   _gameMenuObject: {fileID: 1208157146}
   _timerText: {fileID: 1622288091}
   _timeHandler: {fileID: 658357998}
   _menu: {fileID: 184183488}
   _gm: {fileID: 1720933429}
+  rotateButton: {fileID: 880928475}
+  knockButton: {fileID: 345377542}
+  kickButton: {fileID: 1784460217}
 --- !u!1 &70931777
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +381,7 @@ RectTransform:
   m_Children:
   - {fileID: 1267892668}
   m_Father: {fileID: 1203415356}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -661,8 +669,8 @@ MonoBehaviour:
   _difficultySelectMenu: {fileID: 1031891183}
   _gamePanel: {fileID: 33407920}
   _gamePauseMenu: {fileID: 1031891183}
-  _losePanel: {fileID: 1203415355}
-  _winPanel: {fileID: 0}
+  _losePanel: {fileID: 1372413721}
+  _winPanel: {fileID: 1203415355}
 --- !u!1 &192627552
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +702,7 @@ RectTransform:
   m_Children:
   - {fileID: 1308484268}
   m_Father: {fileID: 1203415356}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1773,11 +1781,11 @@ RectTransform:
   m_Children:
   - {fileID: 1974842673}
   m_Father: {fileID: 1203415356}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -180, y: -66}
+  m_AnchoredPosition: {x: 0, y: -66}
   m_SizeDelta: {x: -640, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764523852
@@ -2449,7 +2457,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\u0420\u0435\u0441\u0442\u0430\u0440\u0442"
 --- !u!222 &995895776
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2610,7 +2618,7 @@ RectTransform:
   m_Children:
   - {fileID: 702267356}
   m_Father: {fileID: 1372413722}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2846,11 +2854,11 @@ RectTransform:
   m_Children:
   - {fileID: 1955945470}
   m_Father: {fileID: 1203415356}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -66}
+  m_AnchoredPosition: {x: -180, y: -66}
   m_SizeDelta: {x: -640, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1075044773
@@ -2967,7 +2975,7 @@ RectTransform:
   m_Children:
   - {fileID: 1360928325}
   m_Father: {fileID: 1372413722}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -3131,6 +3139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1203415356}
+  - component: {fileID: 1203415357}
   m_Layer: 5
   m_Name: WinPanel
   m_TagString: Untagged
@@ -3150,10 +3159,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 961151378}
+  - {fileID: 192627553}
   - {fileID: 1075044772}
   - {fileID: 764523851}
   - {fileID: 100015206}
-  - {fileID: 192627553}
   m_Father: {fileID: 184183487}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3162,6 +3171,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1203415357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203415355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e977d677a2ea44e42980f5e52b889e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _restartButton: {fileID: 1075044773}
+  _mainMenuButton: {fileID: 100015207}
+  _nextLevelButton: {fileID: 764523852}
+  _menu: {fileID: 184183488}
+  _gm: {fileID: 1720933429}
+  _timeHandler: {fileID: 658357998}
 --- !u!1 &1208157146
 GameObject:
   m_ObjectHideFlags: 0
@@ -3363,7 +3390,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\u0412\u044B\u0445\u043E\u0434"
 --- !u!222 &1267892670
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3602,7 +3629,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\u0412\u044B\u0445\u043E\u0434"
 --- !u!222 &1360928327
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3695,6 +3722,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1372413722}
+  - component: {fileID: 1372413723}
   m_Layer: 5
   m_Name: LosePanel
   m_TagString: Untagged
@@ -3714,9 +3742,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 653947703}
+  - {fileID: 1014806671}
   - {fileID: 1769026728}
   - {fileID: 1170451933}
-  - {fileID: 1014806671}
   m_Father: {fileID: 184183487}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3725,6 +3753,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1372413723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372413721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e977d677a2ea44e42980f5e52b889e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _restartButton: {fileID: 1769026729}
+  _mainMenuButton: {fileID: 1170451934}
+  _nextLevelButton: {fileID: 0}
+  _menu: {fileID: 184183488}
+  _gm: {fileID: 1720933429}
+  _timeHandler: {fileID: 658357998}
 --- !u!1 &1375222214
 GameObject:
   m_ObjectHideFlags: 0
@@ -3855,7 +3901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4588,6 +4634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72dbbf532a1bf1345b6053b777ee249c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _menu: {fileID: 184183488}
+  game: {fileID: 33407922}
 --- !u!4 &1720933430
 Transform:
   m_ObjectHideFlags: 0
@@ -4634,7 +4682,7 @@ RectTransform:
   m_Children:
   - {fileID: 995895774}
   m_Father: {fileID: 1372413722}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -5147,7 +5195,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\u0420\u0435\u0441\u0442\u0430\u0440\u0442"
 --- !u!222 &1955945472
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5301,7 +5349,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\u0421\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C"
 --- !u!222 &1974842675
 CanvasRenderer:
   m_ObjectHideFlags: 0

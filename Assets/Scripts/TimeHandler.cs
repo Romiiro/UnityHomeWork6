@@ -21,4 +21,9 @@ public class TimeHandler : MonoBehaviour
             _passedTime += Time.deltaTime;
         }
     }
+
+    public void ResetTimer()
+    {
+        _passedTime = 0;
+    }
 }
